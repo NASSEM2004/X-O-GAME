@@ -46,3 +46,31 @@
     background-color: black;
 }
 
+@media (max-width: 545px) {
+    .info{
+        width: 440px;
+        padding: 15px;
+        font-size: 28px;   
+    } 
+    .info span{
+        font-size: 25px;
+    } 
+    .game-blocks{
+        width: 440px;  
+    }
+    .game-blocks .biock {
+        background-color: #0c1ec5e7;
+        height: 120px;
+        width: calc(100% / 3 - 30px);
+        margin-bottom: 30px;
+        cursor: pointer;
+        transform: 1s;
+        text-align: center;
+        line-height: 120px;
+        font-size: 75px;
+        color: #eec601e7;
+        border: 3px solid #eec601e7;
+     }
+     
+   
+}
