@@ -15,7 +15,7 @@ myBlocks.forEach((blok) => {
     myHeader.innerHTML = "<span>x</span>";
     blok.classList.add("clicked");
   }
-  ServiceWorkerContainer();
+ winner();
  };
 });
 
@@ -66,6 +66,15 @@ function end(a, b, c) {
  myBlocks[a].style.backgroundColor = "red";
  myBlocks[b].style.backgroundColor = "red";
  myBlocks[c].style.backgroundColor = "red";
-
+ myHeader.innerHTML = `<span>${myBlocks[a].innerHTML} Winner</span>`
+ document.querySelector(".game-blocks").style.pointerEvents = "none";
+ document.getElementById("end-game").play();
+ setInterval(()=> {
+    myHeader.innerHTML += ".";
+ }, 1000),
+ setTimeout(() => {
+    location.reload();
+ }, 4000);
 }
+
 
